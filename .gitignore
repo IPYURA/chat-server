@@ -1,0 +1,22 @@
+# 가상환경 폴더 무시
+venv/
+
+# 환경변수 파일 무시
+.env
+
+# Python 관련 불필요 파일들
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE 관련 (VSCode 등)
+.vscode/
+.idea/
+
+# 로그 파일
+*.log
+
+# OS별 불필요 파일
+.DS_Store
+Thumbs.db
