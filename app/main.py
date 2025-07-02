@@ -13,7 +13,7 @@ import numpy as np
 import ast
 import re
 
-# 환경변수 로드
+#  환경변수 로드
 load_dotenv()
 
 app = FastAPI()
@@ -25,7 +25,7 @@ app.add_middleware(
         "http://localhost:3000",
         "http://localhost:3001",
         "http://localhost:3002",
-        "https://cdg-chatbot-practice.vercel.app/"
+        "https://cdg-chatbot-practice.vercel.app"
     ],
     allow_methods=["*"],
     allow_headers=["*"],
@@ -66,7 +66,7 @@ async def generate_embedding(text: str) -> List[float]:
         logger.error(f"임베딩 생성 실패: {e}")
         raise HTTPException(status_code=500, detail=f"임베딩 생성 오류: {str(e)}")
 
-# 자막 업로드 엔드포인트 (수정 금지)
+# 자막 업로드 엔드포인트
 @app.post("/upload-subtitle")
 async def upload_srt_endpoint(subtitle_file: UploadFile = File(...), video_id: str = Form(...)):
     try:
